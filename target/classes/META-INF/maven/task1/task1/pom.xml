@@ -14,17 +14,11 @@
 	<url>http://www.example.com</url>
 	
 <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <selenium.version>3.141.59</selenium.version>
-    <cucumber.version>5.7.0</cucumber.version>
-    <testng.version>7.4.0</testng.version>
-    <allure.cucumber5.version>2.14.0</allure.cucumber5.version>
-    <maven.compiler.plugin.version>3.5.1</maven.compiler.plugin.version>
-    <maven.surefire.plugin.version>3.0.0-M5</maven.surefire.plugin.version>
+ <maven.surefire.plugin.version>3.0.0-M5</maven.surefire.plugin.version>
+     <maven.compiler.plugin.version>3.5.1</maven.compiler.plugin.version>
     <maven.compiler.source>11</maven.compiler.source>
     <maven.compiler.target>11</maven.compiler.target>
-    <aspectj.version>1.9.6</aspectj.version>
-    <allure.maven.version>2.10.0</allure.maven.version>
+    <aspectj.version>1.9.7</aspectj.version>
   </properties>
 	<dependencies>
     <dependency>
@@ -67,10 +61,46 @@
     <artifactId>poi-ooxml</artifactId>
     <version>5.0.0</version>
 </dependency>
+  
+    <!-- Dependencies for generating Allure reports -->
+    <dependency>
+      <groupId>io.qameta.allure</groupId>
+      <artifactId>allure-testng</artifactId>
+      <version>2.17.0</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.qameta.allure</groupId>
+      <artifactId>allure-cucumber5-jvm</artifactId>
+      <version>2.17.0</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
 
-</dependencies>
-<build>
-    <plugins>   
+  <build>
+    <plugins>
+      <!-- Plugin configuration for generating Allure reports -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>${maven.surefire.plugin.version}</version>
+        <configuration>
+          <suiteXmlFiles>
+            <suiteXmlFile>testng.xml</suiteXmlFile>
+          </suiteXmlFiles>
+          <argLine>
+            -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
+            -Dcucumber.options="--plugin io.qameta.allure.cucumber5jvm.AllureCucumber5Jvm"
+          </argLine>
+        </configuration>
+        <dependencies>
+          <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>${aspectj.version}</version>
+          </dependency>
+        </dependencies>
+      </plugin>
       <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -80,44 +110,6 @@
                     <target>${maven.compiler.target}</target> 
                 </configuration>
             </plugin>
-      
-     <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-surefire-plugin</artifactId>
-             <version>${maven.surefire.plugin.version}</version>
-            <configuration>
-                 <suiteXmlFiles>
-                        <suiteXmlFile>testng.xml</suiteXmlFile>
-                    </suiteXmlFiles>
-                <argLine>
-                    -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
-                    -Dcucumber.options="--plugin io.qameta.allure.cucumber5jvm.AllureCucumber5Jvm"
-                </argLine>
-                         
-            </configuration>
-            <dependencies>
-                <dependency>
-                    <groupId>org.aspectj</groupId>
-                    <artifactId>aspectjweaver</artifactId>
-                    <version>${aspectj.version}</version>
-                </dependency>
-
-            </dependencies>
-        </plugin>
-         
-         <plugin>
-                <groupId>io.qameta.allure</groupId>
-                <artifactId>allure-maven</artifactId>
-                <version>${allure.maven.version}</version>
-                <configuration>
-                    <reportVersion>${allure.version}</reportVersion>
-                </configuration>
-            </plugin>
-      </plugins>      
-   </build>
-    
-    
-
+    </plugins>
+  </build>
 </project>
-
-	
