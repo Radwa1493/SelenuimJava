@@ -9,7 +9,7 @@
 			<class name="MyRunner.TestRunner" />
         </classes>
     </test>  
-   <!--  
+
 	  <test name="Chrome">
        <parameter name="browser" value="Chrome"/>
         <classes>
@@ -23,5 +23,5 @@
 			<class name="MyRunner.TestRunner" />
         </classes>
     </test> 
-	  -->
+
 </suite>
