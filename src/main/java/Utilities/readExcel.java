@@ -19,7 +19,7 @@ public class readExcel {
 	public static ArrayList<String> readColumnFromExcel(String fileName, int sheetname, int columnIndex) throws IOException {
         ArrayList<String> columnData = new ArrayList<String>();
 		String Data= null;
-		 String ExcelPath_ElementLocation =currentDir + "\\src\\test\\java\\Utilities\\"+fileName;
+		 String ExcelPath_ElementLocation =currentDir + "\\src\\main\\java\\Utilities\\"+fileName;
 
 			File file = new File(ExcelPath_ElementLocation);   //creating a new file instance  
 			FileInputStream fis = new FileInputStream(file);   //obtaining bytes from the file  
@@ -32,7 +32,6 @@ public class readExcel {
                 }
             	
             }
-       System.out.println("Expected data "+columnData);
         return columnData;
     }
 	

@@ -68,7 +68,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 		}
 
 		driver.manage().window().maximize(); 
-		driver.get("http://subscribe.stctv.com");
+		driver.get("https://subscribe.jawwy.tv/eg-en");
 	}
 
 	@AfterSuite

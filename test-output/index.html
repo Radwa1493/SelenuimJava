@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-BDD_Test_Suite" class="navigator-link">
-              <span class="suite-name border-failed">BDD Test Suite</span>
+              <span class="suite-name border-passed">BDD Test Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -93,21 +93,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method, 1 failed,   </span>
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-BDD_Test_Suite" class="hide-methods failed suite-BDD_Test_Suite"> (hide)</a> <!-- hide-methods failed suite-BDD_Test_Suite -->
-                      <a href="#" panel-name="suite-BDD_Test_Suite" class="show-methods failed suite-BDD_Test_Suite"> (show)</a> <!-- show-methods failed suite-BDD_Test_Suite -->
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-BDD_Test_Suite" class="hide-methods passed suite-BDD_Test_Suite"> (hide)</a> <!-- hide-methods passed suite-BDD_Test_Suite -->
+                      <a href="#" panel-name="suite-BDD_Test_Suite" class="show-methods passed suite-BDD_Test_Suite"> (show)</a> <!-- show-methods passed suite-BDD_Test_Suite -->
                     </span>
-                    <div class="method-list-content failed suite-BDD_Test_Suite">
+                    <div class="method-list-content passed suite-BDD_Test_Suite">
                       <span>
-                        <img src="failed.png" width="3%"/>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-BDD_Test_Suite" title="MyRunner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Navigate to &quot;http://subscribe.stctv.com&quot; , Validate subscribtion package&quot;, &quot;Optional[subscribtion]&quot;)">runScenario("Navigate to "http://subscribe.stctv.com" , Validate subscribtion package", "Optional[subscribtion]")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content failed suite-BDD_Test_Suite -->
+                    </div> <!-- method-list-content passed suite-BDD_Test_Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -119,9 +119,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-BDD_Test_Suite" class="panel BDD_Test_Suite">
-          <div class="suite-BDD_Test_Suite-class-failed">
+          <div class="suite-BDD_Test_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
+              <img src="passed.png"/>
               <span class="class-name">MyRunner.TestRunner</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -131,22 +131,12 @@
                   </a> <!-- runScenario("Navigate to "http://subscribe.stctv.com" , Validate subscribtion package", "Optional[subscribtion]") -->
                   <span class="method-name">runScenario</span>
                   <span class="parameters">("Navigate to "http://subscribe.stctv.com" , Validate subscribtion package", "Optional[subscribtion]")</span>
-                  <div class="stack-trace">java.io.FileNotFoundException: C:\Users\ZZ00VO865\Desktop\Automation\Selenuim_Java\SelenuimJava\src\test\java\Utilities\TestDate.xlsx (The system cannot find the path specified)
-	at java.base/java.io.FileInputStream.open0(Native Method)
-	at java.base/java.io.FileInputStream.open(FileInputStream.java:216)
-	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:157)
-	at Utilities.readExcel.readColumnFromExcel(readExcel.java:25)
-	at pages.SubscribtionPage.check_Subscribtion(SubscribtionPage.java:72)
-	at stepDefinitions.StepDefinition.Check_SA(StepDefinition.java:20)
-	at ✽.Check Subscrition SA data(file:///C:/Users/ZZ00VO865/Desktop/Automation/Selenuim_Java/SelenuimJava/src/main/java/Features/Subscription.feature:5)
-
-</div> <!-- stack-trace -->
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-BDD_Test_Suite-class-failed -->
+          </div> <!-- suite-BDD_Test_Suite-class-passed -->
         </div> <!-- panel BDD_Test_Suite -->
         <div panel-name="test-xml-BDD_Test_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -157,12 +147,12 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite configfailurepolicy=&quot;continue&quot; thread-count=&quot;1&quot; parallel=&quot;tests&quot; name=&quot;BDD Test Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
-  &lt;test thread-count=&quot;1&quot; parallel=&quot;tests&quot; name=&quot;ChromeDocker&quot;&gt;
-    &lt;parameter name=&quot;browser&quot; value=&quot;ChromeDocker&quot;/&gt;
+  &lt;test thread-count=&quot;1&quot; parallel=&quot;tests&quot; name=&quot;Firefox&quot;&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;Firefox&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;MyRunner.TestRunner&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- ChromeDocker --&gt;
+  &lt;/test&gt; &lt;!-- Firefox --&gt;
 &lt;/suite&gt; &lt;!-- BDD Test Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -174,7 +164,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">ChromeDocker (1 class)</span>
+                <span class="test-name">Firefox (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -212,12 +202,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'MyRunner.TestRunner')
-data.setCell(0, 3, 616);
+data.setCell(0, 3, 19810);
 window.suiteTableData['BDD_Test_Suite']= { tableData: data, tableDiv: 'times-div-BDD_Test_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 13 seconds</span>
+              <span class="suite-total-time">Total running time: 44 seconds</span>
               <div id="times-div-BDD_Test_Suite">
               </div> <!-- times-div-BDD_Test_Suite -->
             </div> <!-- times-div -->
@@ -245,26 +235,24 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">MyRunner.TestRunner</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
-                <span class="method-name">setUp(ChromeDocker)</span>
+                <span class="method-name">setUp(Firefox)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-class before">
-                <span class="method-name">setUpClass(org.testng.TestRunner@47d9a273)</span>
-                <span class="method-start">11957 ms</span>
+                <span class="method-name">setUpClass(org.testng.TestRunner@26e356f0)</span>
+                <span class="method-start">23865 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">runScenario("Navigate to "http://subscribe.stctv.com" , Validate subscribtion package", "Optional[subscribtion]")</span>
-                <span class="method-start">12470 ms</span>
+                <span class="method-start">24845 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">13096 ms</span>
+                <span class="method-start">44680 ms</span>
               </div> <!-- configuration-class after -->
               <div class="configuration-suite after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">13177 ms</span>
+                <span class="method-start">45052 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

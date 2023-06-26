@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite configfailurepolicy="continue" thread-count="1" parallel="tests" name="Failed suite [BDD Test Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="1" parallel="tests" name="ChromeDocker(failed)">
-    <parameter name="browser" value="ChromeDocker"/>
+  <test thread-count="1" parallel="tests" name="Firefox(failed)">
+    <parameter name="browser" value="Firefox"/>
     <classes>
       <class name="MyRunner.TestRunner">
         <methods>
@@ -14,5 +14,5 @@
         </methods>
       </class> <!-- MyRunner.TestRunner -->
     </classes>
-  </test> <!-- ChromeDocker(failed) -->
+  </test> <!-- Firefox(failed) -->
 </suite> <!-- Failed suite [BDD Test Suite] -->
