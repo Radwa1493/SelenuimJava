@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-06-26T17:26:31 EET" name="BDD Test Suite" finished-at="2023-06-26T17:26:45 EET" duration-ms="13127">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:MyRunner.TestRunner@3d1cfad4]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test started-at="2023-06-26T17:26:31 EET" name="ChromeDocker" finished-at="2023-06-26T17:26:45 EET" duration-ms="13127">
+      <class name="MyRunner.TestRunner">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:MyRunner.TestRunner@3d1cfad4]" started-at="2023-06-26T17:26:31 EET" name="setUp" finished-at="2023-06-26T17:26:43 EET" duration-ms="11935" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ChromeDocker]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:MyRunner.TestRunner@3d1cfad4]" started-at="2023-06-26T17:26:43 EET" name="setUpClass" finished-at="2023-06-26T17:26:44 EET" duration-ms="492" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@47d9a273]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:MyRunner.TestRunner@3d1cfad4]" started-at="2023-06-26T17:26:44 EET" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-06-26T17:26:44 EET" duration-ms="616" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Navigate to "http://subscribe.stctv.com" , Validate subscribtion package"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[subscribtion]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.io.FileNotFoundException">
+            <message>
+              <![CDATA[C:\Users\ZZ00VO865\Desktop\Automation\Selenuim_Java\SelenuimJava\src\test\java\Utilities\TestDate.xlsx (The system cannot find the path specified)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.io.FileNotFoundException: C:\Users\ZZ00VO865\Desktop\Automation\Selenuim_Java\SelenuimJava\src\test\java\Utilities\TestDate.xlsx (The system cannot find the path specified)
+at java.base/java.io.FileInputStream.open0(Native Method)
+at java.base/java.io.FileInputStream.open(FileInputStream.java:216)
+at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+at Utilities.readExcel.readColumnFromExcel(readExcel.java:25)
+at pages.SubscribtionPage.check_Subscribtion(SubscribtionPage.java:72)
+at stepDefinitions.StepDefinition.Check_SA(StepDefinition.java:20)
+at ✽.Check Subscrition SA data(file:///C:/Users/ZZ00VO865/Desktop/Automation/Selenuim_Java/SelenuimJava/src/main/java/Features/Subscription.feature:5)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.io.FileNotFoundException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:MyRunner.TestRunner@3d1cfad4]" started-at="2023-06-26T17:26:45 EET" name="tearDownClass" finished-at="2023-06-26T17:26:45 EET" duration-ms="16" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:MyRunner.TestRunner@3d1cfad4]" started-at="2023-06-26T17:26:45 EET" name="tearDown" finished-at="2023-06-26T17:26:45 EET" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- MyRunner.TestRunner -->
+    </test> <!-- ChromeDocker -->
+  </suite> <!-- BDD Test Suite -->
+</testng-results>
